@@ -8,7 +8,7 @@ Small EFI utility that clears the power-on and setup passwords in IBM x3550/x365
 
 You'll need the GNU-EFI headers and libraries installed if you want to build this from source. Alternatively, you can just download a precompiled binary from the release page.
 ```
-apt install gnu-efi avr-libc
+apt install gnu-efi build-essential
 ```
 
 ### Building
