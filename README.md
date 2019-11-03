@@ -24,6 +24,16 @@ The resulting binary is named `ibm_pw_clear.efi`
 * You can directly boot to the binary if you rename it to `shellx64.efi` and place it on a USB drive. The server should automatically reboot after clearing the passwords.
 * Alternatively, you can also boot into a UEFI shell and run `ibm_pw_clear.efi` manually
 
+For USB Stick:
+```
+mkdosfs -F 32 -I /dev/sdb1
+mount /dev/sdb1 /mnt/
+mkdir /mnt/efi/boot -p
+cp ibm_pw_clear.efi /mnt/efi/boot/
+cp ibm_pw_clear.efi /mnt/efi/boot/shellx64.efi
+umount /mnt/
+```
+
 ### FAQ
 
 * **Wait, how am I supposed to run this tool if the boot and setup passwords are both set?**  
